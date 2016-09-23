@@ -14,6 +14,7 @@ def jsonLogic(tests, data=None):
   op = list(tests.keys())[0]
   values = tests[op]
   operations = {
+    "stricmp"  : (lambda a, b: a.lower() == b.lower()),
     "=="  : (lambda a, b: a == b),
     "===" : (lambda a, b: a is b),
     "!="  : (lambda a, b: a != b),
